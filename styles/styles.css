@@ -111,11 +111,24 @@ button {
     transition: transform 0.4s ease, background-color 0.4s ease;
     cursor: pointer;
     overflow: hidden;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     background-color: #f8f9fa;
+}
+
+.skill-item h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 .skill-description {
@@ -127,6 +140,7 @@ button {
     transition: opacity 0.4s ease;
     max-height: 0;
     overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .skill-item:hover .skill-description {
@@ -146,4 +160,12 @@ button {
 
 #skill-description.visible {
     opacity: 1;
+}
+
+/* Estilo para la cuadrícula de habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el número de columnas automáticamente */
+    gap: 1.5rem; /* Espaciado entre los elementos */
+    padding: 1rem;
 }
