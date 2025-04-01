@@ -42,6 +42,33 @@ section {
     padding: 2rem;
     max-width: 800px;
     margin: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Estilo para la sección de habilidades */
+section#skills {
+    padding: 2rem 0;
+    /* Espaciado superior e inferior */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total */
+    margin: 0 auto;
+    /* Centra la sección horizontalmente */
+    text-align: center;
+    /* Centra el título y el contenido */
+}
+
+/* Estilo para el título de la sección de habilidades */
+section#skills h2 {
+    margin-bottom: 2rem;
+    /* Espaciado inferior para separar el título de la cuadrícula */
+    font-size: 2rem;
+    /* Tamaño del texto del título */
+    color: #333;
+    /* Color del texto */
 }
 
 footer {
@@ -61,13 +88,17 @@ button {
 /* Personalización de botones de Bootstrap */
 .btn {
     &-primary {
-        background-color: #4CAF50; /* Color de fondo */
-        border-color: #4CAF50; /* Color del borde */
-        color: #fff; /* Color del texto */
+        background-color: #4CAF50;
+        /* Color de fondo */
+        border-color: #4CAF50;
+        /* Color del borde */
+        color: #fff;
+        /* Color del texto */
     }
 
     &-primary:hover {
-        background-color: #45a049; /* Fondo al pasar el mouse */
+        background-color: #45a049;
+        /* Fondo al pasar el mouse */
         border-color: #45a049;
     }
 
@@ -108,44 +139,61 @@ button {
 /* Animación para las habilidades */
 .skill-item {
     position: relative;
-    transition: transform 0.4s ease, background-color 0.4s ease;
+    transition: transform 0.7s ease, background-color 0.7s ease;
     cursor: pointer;
     overflow: hidden;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 12px;
+    /* Bordes más redondeados */
+    padding: 2rem;
+    /* Aumenta el padding interno */
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+    min-height: 250px;
+    /* Aumenta la altura mínima del contenedor */
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el contenido esté en columna */
+    justify-content: space-between;
+    /* Espacia el contenido verticalmente */
 }
 
 .skill-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    /* Aumenta el efecto de escala al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    /* Sombra más pronunciada */
     background-color: #f8f9fa;
 }
 
 .skill-item h5 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    /* Aumenta el espacio debajo del título */
+    font-size: 1.5rem;
+    /* Aumenta el tamaño del texto del título */
     color: #333;
+    word-wrap: break-word;
+    /* Permite que el texto se ajuste si es muy largo */
 }
 
 .skill-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    /* Aumenta el tamaño del texto de la descripción */
     font-style: italic;
     color: #6c757d;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    /* Aumenta el espacio superior */
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.7s ease, max-height 0.7s ease;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .skill-item:hover .skill-description {
     opacity: 1;
-    max-height: 100px; /* Ajusta según el contenido */
+    max-height: 150px;
+    /* Ajusta la altura máxima para descripciones más largas */
 }
 
 /* Contenedor de la descripción */
@@ -153,8 +201,9 @@ button {
     font-size: 1.1rem;
     font-style: italic;
     color: #6c757d;
-    min-height: 50px; /* Para evitar que el contenido salte */
-    transition: opacity 0.3s ease;
+    min-height: 50px;
+    /* Para evitar que el contenido salte */
+    transition: opacity 0.6s ease;
     opacity: 0;
 }
 
@@ -165,7 +214,56 @@ button {
 /* Estilo para la cuadrícula de habilidades */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el número de columnas automáticamente */
-    gap: 1.5rem; /* Espaciado entre los elementos */
-    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas de igual ancho */
+    gap: 2rem;
+    /* Espaciado entre los elementos */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho del contenedor */
+    max-width: 1200px;
+    /* Limita el ancho máximo de la cuadrícula */
+    margin: 0 auto;
+    /* Centra la cuadrícula horizontalmente */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total */
+    padding: 0 2rem;
+    /* Padding horizontal para evitar que los elementos toquen los bordes */
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo para la sección de proyectos */
+section#projects {
+    padding: 2rem 0;
+    /* Espaciado superior e inferior */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total */
+    margin: 0 auto;
+    /* Centra la sección horizontalmente */
+    text-align: center;
+    /* Centra el título y el contenido */
+}
+
+/* Estilo para el título de la sección de proyectos */
+section#projects h2 {
+    margin-bottom: 2rem;
+    /* Espaciado inferior para separar el título del contenido */
+    font-size: 2rem;
+    /* Tamaño del texto del título */
+    color: #333;
+    /* Color del texto */
 }
