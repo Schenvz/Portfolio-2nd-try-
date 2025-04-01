@@ -1,8 +1,8 @@
 <br/>
 <p align="center">
-  <h1 align="center">First try of my personal portfolio
+    <h1 align="center">Second try of my personal portfolio
 </h1>
-  <p align="center">this repo is my first attempt of my own portfolio made by myself
+  <p align="center">this repo is my second attempt of my own portfolio made by myself
     
     <br/> ex
     <br/> ex
