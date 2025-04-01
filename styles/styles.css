@@ -1,37 +1,106 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #007BFF;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-            margin-top: 2rem;
-        }
+* {
+    margin: 0;
+    padding: 0px;
+    font-weight: 100;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 1s ease;
+    background-color: #f4f4f4;
+    /* Color de fondo inicial */
+    color: #1f1e1e;
+    /* Color del texto inicial */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+button {
+    margin: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Personalización de botones de Bootstrap */
+.btn {
+    &-primary {
+        background-color: #4CAF50; /* Color de fondo */
+        border-color: #4CAF50; /* Color del borde */
+        color: #fff; /* Color del texto */
+    }
+
+    &-primary:hover {
+        background-color: #45a049; /* Fondo al pasar el mouse */
+        border-color: #45a049;
+    }
+
+    &-secondary {
+        background-color: #008CBA;
+        border-color: #008CBA;
+        color: #fff;
+    }
+
+    &-secondary:hover {
+        background-color: #007bb5;
+        border-color: #007bb5;
+    }
+
+    &-warning {
+        background-color: #f0ad4e;
+        border-color: #f0ad4e;
+        color: #fff;
+    }
+
+    &-warning:hover {
+        background-color: #ec971f;
+        border-color: #ec971f;
+    }
+
+    &-danger {
+        background-color: #f44336;
+        border-color: #f44336;
+        color: #fff;
+    }
+
+    &-danger:hover {
+        background-color: #e53935;
+        border-color: #e53935;
+    }
+}
