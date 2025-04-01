@@ -66,23 +66,63 @@
     </section>
     <section id="skills" class="my-5">
         <h2 class="text-center">Habilidades</h2>
-        <ul class="list-group">
-            <li class="list-group-item">Frontend (HTML, CSS y Handlebars)</li>
-            <li class="list-group-item">
-                Lenguajes de Programación (JavaScript)
+        <ul class="list-group text-center">
+            <!-- Desarrollo Frontend -->
+            <li class="list-group-item skill-item">
+                Frontend (HTML, CSS y Handlebars)
+                <div class="skill-description">Conocimiento avanzado en HTML, CSS y Handlebars para crear interfaces web atractivas.</div>
             </li>
-            <li class="list-group-item">Frameworks (React, Bootstrap)</li>
-            <li class="list-group-item">Bases de Datos (MongoDB)</li>
-            <li class="list-group-item">
-                Herramientas y Gestión de Paquetes (NPM)
+            <li class="list-group-item skill-item">
+                React.js
+                <div class="skill-description">Desarrollo de interfaces de usuario dinámicas y responsivas.</div>
             </li>
-            <li class="list-group-item">
-                Control de Versiones y Herramientas de Desarrollo (Git Bash)
+            <li class="list-group-item skill-item">
+                HTML5 y CSS3
+                <div class="skill-description">Estructuración y estilización de contenido web.</div>
+            </li>
+            <li class="list-group-item skill-item">
+                Bootstrap
+                <div class="skill-description">Uso de componentes y estilos predefinidos para agilizar el diseño web.</div>
+            </li>
+
+            <!-- Desarrollo Backend -->
+            <li class="list-group-item skill-item">
+                Node.js
+                <div class="skill-description">Creación de servidores y lógica de negocio en el lado del servidor.</div>
+            </li>
+            <li class="list-group-item skill-item">
+                Express.js
+                <div class="skill-description">Framework para aplicaciones web en Node.js, facilitando la gestión de rutas y middleware.</div>
+            </li>
+
+            <!-- Bases de Datos -->
+            <li class="list-group-item skill-item">
+                MongoDB
+                <div class="skill-description">Gestión de bases de datos NoSQL orientadas a documentos.</div>
+            </li>
+
+            <!-- Control de Versiones -->
+            <li class="list-group-item skill-item">
+                Git y GitHub
+                <div class="skill-description">Manejo de repositorios, control de versiones y colaboración en proyectos.</div>
+            </li>
+
+            <!-- Herramientas de Diseño -->
+            <li class="list-group-item skill-item">
+                Canva
+                <div class="skill-description">Creación de gráficos y contenido visual para proyectos web.</div>
+            </li>
+
+            <!-- Otras Habilidades -->
+            <li class="list-group-item skill-item">
+                Google Chrome
+                <div class="skill-description">Uso de herramientas de desarrollo para depuración y pruebas.</div>
+            </li>
+            <li class="list-group-item skill-item">
+                Google
+                <div class="skill-description">Búsqueda eficiente de información y soluciones técnicas.</div>
             </li>
         </ul>
-        <div class="text-center mt-4">
-            <a href="#projects" class="btn btn-warning">Ver Proyectos</a>
-        </div>
     </section>
     <section id="projects" class="bg-light py-5">
         <div class="container">
@@ -114,6 +154,25 @@
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Seleccionamos los elementos de las habilidades y el contenedor de descripción
+        const skillItems = document.querySelectorAll('.skill-item');
+        const skillDescription = document.getElementById('skill-description');
+
+        // Agregamos eventos a cada habilidad
+        skillItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                // Mostramos la descripción de la habilidad
+                skillDescription.textContent = item.getAttribute('data-description');
+                skillDescription.classList.add('visible');
+            });
+
+            item.addEventListener('mouseout', () => {
+                // Ocultamos la descripción cuando el mouse sale
+                skillDescription.classList.remove('visible');
+            });
+        });
+    </script>
 </body>
 
 </html>

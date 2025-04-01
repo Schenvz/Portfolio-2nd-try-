@@ -104,3 +104,46 @@ button {
         border-color: #e53935;
     }
 }
+
+/* Animación para las habilidades */
+.skill-item {
+    position: relative;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.skill-item:hover {
+    transform: scale(1.03);
+    background-color: #f8f9fa;
+}
+
+.skill-description {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.skill-item:hover .skill-description {
+    opacity: 1;
+    max-height: 100px; /* Ajusta según el contenido */
+}
+
+/* Contenedor de la descripción */
+#skill-description {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #6c757d;
+    min-height: 50px; /* Para evitar que el contenido salte */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#skill-description.visible {
+    opacity: 1;
+}
